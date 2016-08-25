@@ -1,0 +1,76 @@
+.ydj-tooltip {
+  height: 24px;
+  border-radius: 2px;
+  position: absolute;
+  left: -1000px;
+  top: -1000px;
+  background-color: #333;
+  display: none;
+  padding: 0 20px; }
+  .ydj-tooltip:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 1; }
+  .ydj-tooltip .tooltips-inner {
+    min-width: 80px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    position: relative; }
+  .ydj-tooltip.tooltips-right::after {
+    top: 6px;
+    left: -6px;
+    border: 6px solid transparent;
+    border-right: 6px solid #333;
+    border-left: none; }
+  .ydj-tooltip.tooltips-left::after {
+    top: 6px;
+    right: -6px;
+    border: 6px solid transparent;
+    border-left: 6px solid #333;
+    border-right: none; }
+  .ydj-tooltip.tooltips-top::after {
+    bottom: -6px;
+    left: 50%;
+    margin-left: -3px;
+    border: 6px solid transparent;
+    border-top: 6px solid #333;
+    border-bottom: none; }
+  .ydj-tooltip.tooltips-top-left::after {
+    bottom: -6px;
+    left: 8px;
+    border: 6px solid transparent;
+    border-top: 6px solid #333;
+    border-bottom: none; }
+  .ydj-tooltip.tooltips-top-right::after {
+    bottom: -6px;
+    right: 8px;
+    border: 6px solid transparent;
+    border-top: 6px solid #333;
+    border-bottom: none; }
+  .ydj-tooltip.tooltips-bottom::after {
+    top: -6px;
+    left: 50%;
+    margin-left: -3px;
+    border: 6px solid transparent;
+    border-bottom: 6px solid #333;
+    border-top: none; }
+  .ydj-tooltip.tooltips-bottom-left::after {
+    top: -6px;
+    left: 8px;
+    border: 6px solid transparent;
+    border-bottom: 6px solid #333;
+    border-top: none; }
+  .ydj-tooltip.tooltips-bottom-right::after {
+    top: -6px;
+    right: 8px;
+    border: 6px solid transparent;
+    border-bottom: 6px solid #333;
+    border-top: none; }
+
+/*# sourceMappingURL=YDJ.css.map*/

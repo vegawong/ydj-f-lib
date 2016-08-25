@@ -1,0 +1,18 @@
+{
+  "name": "ydj-plugins",
+  "version": "1.0.0",
+  "description": "伊的家公共前端库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "wbuild --config ./webpack/webpack.config.js --no-compress --devtool source-map -w",
+    "build": "wbuild --config ./webpack/webpack.config.js --no-compress"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jquery": "^1.11.3",
+    "moment": "^2.14.1",
+    "webpack": "^1.13.2"
+  }
+}
