@@ -42,7 +42,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'test/aa.js':['webpack'],
+      'test/aa.js': ['webpack'],
     },
 
     babelPreprocessor: {
@@ -86,6 +86,10 @@ module.exports = function(config) {
         prefs: {
           'browser.fixup.alternate.enabled': false
         }
+      },
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
       }
     },
 
@@ -111,5 +115,10 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
+  });
+
+
+  if (process.env.TRAVIS) {
+    config.browsers = ['Chrome_travis_ci'];
+  }
 }
