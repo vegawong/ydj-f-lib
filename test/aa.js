@@ -19,7 +19,11 @@ describe('加法函数的测试', function() {
 
 
 describe('import', function() {
-  it('import as a function', function(){
-    expect(YDJ.name).to.be.equal('ydj');
+  it('import should be an object', function(){
+    expect(typeof YDJ).to.be.equal('object');
+  });
+
+  it('name should be ydj', function(){
+    expect(YDJ.name).to.be.equal('ydj2');
   })
 })
