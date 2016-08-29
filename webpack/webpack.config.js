@@ -5,9 +5,9 @@ var webpack = require('webpack');
 module.exports = function(webpackConfig) {
   // 去除第一个插件CommonChunksPlugin
   webpackConfig.plugins = webpackConfig.plugins.slice(1);
-
   webpackConfig.entry = {
-    YDJ: path.join(process.cwd(), 'src/index.js')
+    YDJ: path.join(process.cwd(), 'src/index.js'),
+    fullPage: path.join(process.cwd(), 'src/fullPage.js'),
   }
 
   webpackConfig.externals = [

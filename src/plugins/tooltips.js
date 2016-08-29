@@ -226,7 +226,6 @@ function Plugin(option) {
 
 // jQuery 插件扩展
 // -------------
-console.log($, $.fn);
 $.fn.tooltips = Plugin;
 $.fn.tooltips.Constructor = Tooltips;
 
