@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../vendor/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>CountDown</h1>
+    <h2>target mode</h2>
+    <ul>
+      <li>targetTime: 1 day later</li>
+      <li>auto: true</li>
+    </ul>
+    <p>
+        <span class="t-day"></span>天
+        <span class="t-hour"></span>时
+        <span class="t-minute"></span>分
+        <span class="t-second"></span>秒
+    </p>
+    <script type="text/javascript">
+      $(function() {
+        var targetTime = YDJ.moment().add(1, 'days');
+        var countDownTarget = new YDJ.CountDown({
+          targetTime: targetTime
+        });
+        countDownTarget.on('running', function(duration) {
+          var days = YDJ.utils.formatNumber(duration.get('days'));
+          var hours = YDJ.utils.formatNumber(duration.get('hours'));
+          var minutes = YDJ.utils.formatNumber(duration.get('minutes'));
+          var seconds = YDJ.utils.formatNumber(duration.get('seconds'));
+          $('.t-day').html(days);
+          $('.t-hour').html(hours);
+          $('.t-minute').html(minutes);
+          $('.t-second').html(seconds);
+        });
+
+        setTimeout(function(){
+          console.log(countDownTarget);
+        },3000);
+      });
+    </script>
+
+
+    <h2>fixed mode</h2>
+    <ul>
+      <li>fix duration: 10 seconds</li>
+      <li>auto: false</li>
+    </ul>
+    <p>
+
+        <span class="f-hour">00</span>:
+        <span class="f-minute">00</span>:
+        <span class="f-second">10</span>:
+        <span class="f-ms">00</span>
+    </p>
+    <a class="btn1" href="javascript:;" >begin</a>
+    <a class="btn2" href="javascript:;" >stop</a>
+    <a class="btn3" href="javascript:;" >reset</a>
+    <script src="../dist/YDJ.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function(){
+        var countDown = new YDJ.CountDown({
+          mode: 'fixed',
+          duration: 10000,
+          unit: 'ms'
+        });
+        countDown.on('running', function(duration) {
+          var ms = YDJ.utils.formatNumber(duration.get('ms'));
+          var hours = YDJ.utils.formatNumber(duration.get('h'));
+          var minutes = YDJ.utils.formatNumber(duration.get('m'));
+          var seconds = YDJ.utils.formatNumber(duration.get('s'));
+          $('.f-ms').html(ms);
+          $('.f-hour').html(hours);
+          $('.f-minute').html(minutes);
+          $('.f-second').html(seconds);
+        });
+        $('.btn1').on('click', function(){
+          countDown.begin();
+        });
+        $('.btn2').on('click', function(){
+          countDown.stop();
+        });
+        $('.btn3').on('click', function(){
+          countDown.reset();
+        });
+      })
+    </script>
+  </body>
+</html>

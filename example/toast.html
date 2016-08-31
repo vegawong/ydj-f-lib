@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../vendor/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../dist/YDJ.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+      .btn {
+        padding: 10px 20px;
+        text-align: center;
+        border: 1px solid #eee;
+        border-radius: 2px;
+      }
+      a {
+        text-decoration: none;
+        color: #585858;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="javascript:;" class="btn btn1">default</a>
+    <a href="javascript:;" class="btn btn2">heading and icon</a>
+    <a href="javascript:;" class="btn btn3">loader</a>
+    <script src="../dist/YDJ.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('.btn1').on('click',function() {
+          $.toast('default show');
+        });
+
+        $('.btn2').on('click',function() {
+          $.toast({
+              heading: 'Information',
+              text: 'Information, Heading, and the icon which can set as info,warn,error,success',
+              icon: 'info',
+          })
+        })
+
+        $('.btn3').on('click', function(){
+          $.toast({
+            text: 'Loader disable by default, you can open it by set the loader to true,and the loaderBg (color)',
+            loader: true
+          })
+        })
+      })
+    </script>
+  </body>
+</html>

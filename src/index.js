@@ -1,6 +1,8 @@
 
 import utils from './utils';
 import plugins from './plugins';
+import CountDown from './countDown';
+import moment from 'moment';
 
 import '../sass/index.scss';
 
@@ -8,10 +10,9 @@ const YDJ = {};
 
 YDJ.utils = utils;
 YDJ.plugins = plugins;
+YDJ.CountDown = CountDown;
+YDJ.moment = moment;
 
-YDJ.testFunc = function() {
-  console.log('i am a func');
-}
 
 YDJ.name = 'ydj';
 

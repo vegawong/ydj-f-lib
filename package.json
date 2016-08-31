@@ -35,5 +35,9 @@
     "moment": "^2.14.1",
     "phantomjs-prebuilt": "^2.1.12",
     "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "eventemitter3": "^1.2.0",
+    "moment": "^2.14.1"
   }
 }
