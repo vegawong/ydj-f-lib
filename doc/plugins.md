@@ -47,3 +47,39 @@ _usage:_
    [http://s1.yidejia.com/YDJ/fullPage.min.js](http://s1.yidejia.com/YDJ/fullPage.min.js)
 
   [http://s1.yidejia.com/YDJ/fullPage.min.css](http://s1.yidejia.com/YDJ/fullPage.min.css)
+
+
+
+#### toast
+
+  toast提示插件
+
+  _usage:_
+
+  ```javascrpt
+
+  $.toast(options);
+
+  // options DEFAULTS
+  //{
+  //  text: '',
+  //  heading: '',
+  //  showHideTransition: 'fade',
+  //  allowToastClose: true,
+  //  hideAfter: 3000,
+  //  loader: false,
+  //  loaderBg: '#9EC600',
+  //  stack: 5,
+  //  position: 'mid-center',
+  //  bgColor: false,
+  //  textColor: false,
+  //  textAlign: 'left',
+  //  icon: false,
+  //  beforeShow: function() {},
+  //  afterShown: function() {},
+  //  beforeHide: function() {},
+  //  afterHidden: function() {}
+  //}
+  ```
+
+  `options`可以是string,array,object,  如果是string,则以默认的options提示string内容, array则以ul形式展示提示内容

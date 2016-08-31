@@ -22,6 +22,7 @@
     <a href="javascript:;" class="btn btn1">default</a>
     <a href="javascript:;" class="btn btn2">heading and icon</a>
     <a href="javascript:;" class="btn btn3">loader</a>
+    <a href="javascript:;" class="btn btn4">array</a>
     <script src="../dist/YDJ.js" charset="utf-8"></script>
     <script type="text/javascript">
       $(function() {
@@ -42,6 +43,10 @@
             text: 'Loader disable by default, you can open it by set the loader to true,and the loaderBg (color)',
             loader: true
           })
+        })
+
+        $('.btn4').on('click', function(){
+          $.toast(['111', '333', '444'])
         })
       })
     </script>
