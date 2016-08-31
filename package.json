@@ -1,5 +1,5 @@
 {
-  "name": "ydj-plugins",
+  "name": "ydj-f-lib",
   "version": "1.0.0",
   "description": "伊的家公共前端库",
   "main": "dist/YDJ.js",
