@@ -1,0 +1,14 @@
+
+.container{
+  margin:0 auto;
+  padding: 20px;
+  width: 1200px;
+}
+.btn {
+  border: 1px solid #eee;
+  color: #585858;
+  padding: 10px 20px;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+}

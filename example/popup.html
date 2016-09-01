@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html style="overflow: hidden">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../vendor/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../dist/YDJ.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+      <h1>popup</h1>
+      <a href="javascript:;" class="btn">default</a>
+    </div>
+
+    <!-- <div class="ydj-block-bg">
+
+    </div>
+    <div class="ydj-popup">
+      <div class="ydj-popup-wrap">
+        <div class="ydj-popup-container zoomIn animated">
+          <a href="javascript:;" class="ydj-popup-close">×</a>
+          <div class="ydj-popup-content">
+            <h1>Form</h1>
+            <p>
+              sdfasdfasdfasdf
+            </p>
+            <p>
+              asdfasdfasdf
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+    <script src="../dist/YDJ.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function(){
+        var aa = YDJ.popup({
+          text: '<h1>Form</h1>',
+          afterHidden: function() {
+            console.log(this.options);
+          }
+        });
+        $('.btn').on('click', function() {
+            aa.show();
+
+        });
+
+      })
+    </script>
+  </body>
+</html>

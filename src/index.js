@@ -2,9 +2,13 @@
 import utils from './utils';
 import plugins from './plugins';
 import CountDown from './countDown';
+import popup from './popup';
 import moment from 'moment';
 
+
+import 'animate.css';
 import '../sass/index.scss';
+
 
 const YDJ = {};
 
@@ -12,6 +16,7 @@ YDJ.utils = utils;
 YDJ.plugins = plugins;
 YDJ.CountDown = CountDown;
 YDJ.moment = moment;
+YDJ.popup = popup;
 
 
 YDJ.name = 'ydj';

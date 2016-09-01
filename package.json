@@ -37,6 +37,7 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
+    "animate.css": "^3.5.1",
     "eventemitter3": "^1.2.0",
     "moment": "^2.14.1"
   }
