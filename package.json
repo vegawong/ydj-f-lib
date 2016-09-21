@@ -16,7 +16,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "chai": "^3.5.0",
     "clean-webpack-plugin": "^0.1.10",
-    "fullpage.js": "^2.8.4",
+    "eslint-config-yidejia": "^1.0.1",
     "iscroll": "^5.2.0",
     "jquery": "^1.11.3",
     "karma": "^1.2.0",
@@ -39,6 +39,7 @@
   "dependencies": {
     "animate.css": "^3.5.1",
     "eventemitter3": "^1.2.0",
+    "fullpage.js": "^2.8.6",
     "moment": "^2.14.1"
   }
 }

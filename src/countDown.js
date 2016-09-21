@@ -7,14 +7,13 @@ const DEFAULTS = {
   unit: 's', // can be m/s/ms, m-分钟 s-秒  ms-毫秒 倒计时的单位
   duration: 10000, // 单位ms
   auto: true
-}
+};
 
 const unitDelay = {
   m: 60 * 1 * 1000,
   s: 1 * 1000,
   ms: 1
-}
-
+};
 
 
 class CountDown extends EventEmitter {
@@ -33,7 +32,7 @@ class CountDown extends EventEmitter {
       } catch (error) {
         window.console && window.console.error('options.targetTime is not valid date string format');
       }
-    } else if(this.options.mode === 'target' && typeof this.options.targetTime === 'object') {
+    } else if (this.options.mode === 'target' && typeof this.options.targetTime === 'object') {
       this.targetTime = this.options.targetTime;
     }
 
@@ -41,14 +40,14 @@ class CountDown extends EventEmitter {
       window.console && window.console.error('options.targetTime must greater than now date');
       return;
     }
-    if(this.options.mode === 'target' && this.options.auto) {
+    if (this.options.mode === 'target' && this.options.auto) {
       this.begin();
     }
   }
 
   begin() {
     if (this.isBegin) {
-      return ;
+      return;
     }
     this.isBegin = true;
     this.run();
@@ -56,28 +55,28 @@ class CountDown extends EventEmitter {
 
   run() {
     const cal = () => {
-      if(this.options.mode === 'target'){
-        let subValue = this.targetTime.valueOf() - moment().valueOf();
+      if (this.options.mode === 'target') {
+        const subValue = this.targetTime.valueOf() - moment().valueOf();
         if (subValue <= 0) {
           this.stop();
           this.emit('end');
         } else {
-          this.emit('running', moment.duration(subValue))
+          this.emit('running', moment.duration(subValue));
           this.run();
         }
       } else {
-        let subValue = this.targetTime.valueOf() - moment().valueOf();
+        const subValue = this.targetTime.valueOf() - moment().valueOf();
         this.duration = moment.duration(subValue).as('ms');
         if (subValue <= 0) {
           this.stop();
-          this.emit('running', moment.duration(0))
+          this.emit('running', moment.duration(0));
           this.emit('end');
         } else {
-          this.emit('running', moment.duration(subValue))
+          this.emit('running', moment.duration(subValue));
           this.run();
         }
       }
-    }
+    };
 
 
     if (this.timer) {
@@ -85,7 +84,7 @@ class CountDown extends EventEmitter {
     }
     if (!this.running) {
       this.running = true;
-      if(this.options.mode === 'fixed') {
+      if (this.options.mode === 'fixed') {
         this.targetTime = moment().add(this.duration, 'ms');
       }
       cal();
@@ -93,7 +92,7 @@ class CountDown extends EventEmitter {
 
     this.timer = setTimeout(() => {
       cal();
-    }, unitDelay[this.options.unit] || 1000)
+    }, unitDelay[this.options.unit] || 1000);
   }
 
   stop() {
@@ -106,7 +105,7 @@ class CountDown extends EventEmitter {
   }
 
   reset() {
-    if(this.options.mode !== 'fixed') {
+    if (this.options.mode !== 'fixed') {
       return;
     }
     if (this.timer) {
