@@ -6,6 +6,7 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = function(webpackConfig) {
   // 去除第一个插件CommonChunksPlugin
+
   webpackConfig.plugins = webpackConfig.plugins.slice(1);
 
   webpackConfig.entry = {
@@ -26,6 +27,7 @@ module.exports = function(webpackConfig) {
   webpackConfig.output.libraryTarget = 'umd';
 
   let conf_min = _.cloneDeep(webpackConfig);
+  webpackConfig.plugins.splice(2, 1);  
   conf_min.plugins.push(new CleanWebpackPlugin(['dist'], {
     root: process.cwd(),
     verbose: true,
