@@ -20,6 +20,12 @@ module.exports = function(webpackConfig) {
       commonjs2: 'jquery',
       commonjs: 'jquery',
       amd: 'jquery'
+    },
+    moment: {
+      root: 'moment',
+      commonjs2: 'moment',
+      commonjs: 'moment',
+      amd: 'moment'
     }
   }];
 
@@ -27,7 +33,7 @@ module.exports = function(webpackConfig) {
   webpackConfig.output.libraryTarget = 'umd';
 
   let conf_min = _.cloneDeep(webpackConfig);
-  webpackConfig.plugins.splice(2, 1);  
+  webpackConfig.plugins.splice(2, 1);
   conf_min.plugins.push(new CleanWebpackPlugin(['dist'], {
     root: process.cwd(),
     verbose: true,
