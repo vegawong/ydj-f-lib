@@ -3461,7 +3461,8 @@
   position: relative;
   pointer-events: all !important;
   background-color: #444444;
-  color: white; }
+  color: white;
+  box-sizing: border-box; }
 
 .jq-toast-single h2 {
   font-family: arial, sans-serif;
