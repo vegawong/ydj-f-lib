@@ -7,7 +7,7 @@
 		exports["YDJ"] = factory(require("jquery"));
 	else
 		root["YDJ"] = factory(root["jQuery"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_15__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -61,11 +61,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _fullpage = __webpack_require__(4);
+	var _fullpage = __webpack_require__(49);
 
 	var _fullpage2 = _interopRequireDefault(_fullpage);
 
-	__webpack_require__(12);
+	__webpack_require__(95);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -74,14 +74,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 1:
+/***/ 15:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_15__;
 
 /***/ },
 
-/***/ 4:
+/***/ 49:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -94,7 +94,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	(function(global, factory) {
 	    'use strict';
 	    if (true) {
-	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(1)], __WEBPACK_AMD_DEFINE_RESULT__ = function($) {
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(15)], __WEBPACK_AMD_DEFINE_RESULT__ = function($) {
 	          return factory($, global, global.document, global.Math);
 	        }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof exports === "object" && exports) {
@@ -3168,7 +3168,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 12:
+/***/ 95:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
