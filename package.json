@@ -1,6 +1,6 @@
 {
   "name": "ydj-f-lib",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "伊的家公共前端库",
   "main": "dist/YDJ.js",
   "scripts": {
