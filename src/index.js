@@ -4,6 +4,8 @@ import plugins from './plugins';
 import CountDown from './countDown';
 import popup from './popup';
 import moment from 'moment';
+import 'moment/locale/zh-cn';
+
 
 
 import 'animate.css';

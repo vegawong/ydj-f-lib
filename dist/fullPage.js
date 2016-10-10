@@ -65,7 +65,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _fullpage2 = _interopRequireDefault(_fullpage);
 
-	__webpack_require__(95);
+	__webpack_require__(96);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3168,7 +3168,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 95:
+/***/ 96:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
