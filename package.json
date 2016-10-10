@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "animate.css": "^3.5.1",
+    "copy-webpack-plugin": "^3.0.1",
     "eventemitter3": "^1.2.0",
     "fullpage.js": "^2.8.6",
     "moment": "^2.14.1"

@@ -61,7 +61,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _fullpage = __webpack_require__(49);
+	var _fullpage = __webpack_require__(94);
 
 	var _fullpage2 = _interopRequireDefault(_fullpage);
 
@@ -81,7 +81,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 49:
+/***/ 94:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!

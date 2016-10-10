@@ -2,12 +2,17 @@ var path = require('path');
 var webpack = require('webpack');
 var _ = require('lodash');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = function(webpackConfig) {
   // 去除第一个插件CommonChunksPlugin
 
   webpackConfig.plugins = webpackConfig.plugins.slice(1);
+  webpackConfig.plugins.push(new CopyWebpackPlugin([{
+    from: path.join(__dirname, '..', 'node_modules/moment/locale'),
+    to: 'locale'
+  }]));
 
   webpackConfig.entry = {
     YDJ: path.join(process.cwd(), 'src/index.js'),
@@ -21,12 +26,12 @@ module.exports = function(webpackConfig) {
       commonjs: 'jquery',
       amd: 'jquery'
     },
-    moment: {
-      root: 'moment',
-      commonjs2: 'moment',
-      commonjs: 'moment',
-      amd: 'moment'
-    }
+    // moment: {
+    //   // root: 'moment',
+    //   commonjs2: 'moment',
+    //   commonjs: 'moment',
+    //   amd: 'moment'
+    // }
   }];
 
   webpackConfig.output.library = 'YDJ';

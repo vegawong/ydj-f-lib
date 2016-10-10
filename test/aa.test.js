@@ -21,5 +21,14 @@ describe('加法函数的测试', function() {
 describe('import', function() {
   it('import should be an object', function(){
     expect(typeof YDJ).to.be.equal('object');
-  });  
+  });
+})
+
+describe('countDown', function() {
+  it('countDown import', function() {
+    var countdown = new YDJ.CountDown();
+    expect(typeof countdown).to.be.equal('object');
+
+
+  })
 })
