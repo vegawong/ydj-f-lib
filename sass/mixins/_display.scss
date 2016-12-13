@@ -1,0 +1,10 @@
+// display: inline-block
+@mixin inline-block($alignment: middle) {
+  display: inline-block;
+  @if $alignment and $alignment != none {
+    vertical-align: $alignment;
+  }
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}

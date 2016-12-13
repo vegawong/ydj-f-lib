@@ -1,0 +1,10 @@
+// 单行文本超出隐藏替换省略号
+// 宽度参数设置为false时请自行设置宽度
+@mixin singleline-ellipsis($width: 100%){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @if $width {
+      width: $width;
+    }
+}

@@ -1,0 +1,6 @@
+
+// px to rem  基准像素为750px宽度的设计稿
+// 参考手淘rem方案
+@function rem($px, $baseFontSize:75) {
+  @return $px / $baseFontSize * 1rem;
+}

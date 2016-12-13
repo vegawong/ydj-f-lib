@@ -1,0 +1,31 @@
+@mixin hover {
+  &.hover,
+  &:hover {
+    @content;
+  }
+}
+
+
+@mixin focus {
+  &.focus,
+  &:focus {
+    @content;
+  }
+}
+
+
+@mixin disabled {
+  &.disabled,
+  &:disabled {
+    @content;
+  }
+}
+
+
+@mixin active {
+  &.active,
+  &:active {
+    @content;
+  }
+}
+

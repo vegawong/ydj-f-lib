@@ -1,5 +1,5 @@
 import fullPage from 'fullpage.js';
 
-import 'fullpage.js/jquery.fullPage.scss';
+import 'fullpage.js/dist/jquery.fullPage.css';
 
 export default fullPage;

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "karma start",
     "dev": "wbuild --config ./webpack/webpack.config.js --no-compress --devtool source-map -w",
-    "build": "wbuild --config ./webpack/webpack.prod.min.config.js && wbuild --config ./webpack/webpack.prod.config.js --no-compress"
+    "build": "wbuild --config ./webpack/webpack.prod.min.config.js && wbuild --config ./webpack/webpack.prod.config.js --no-compres",
+    "qn": "qn sync ydj-statics -s dist -p YDJ"
   },
   "author": "",
   "license": "ISC",
